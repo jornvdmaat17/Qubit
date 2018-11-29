@@ -11,21 +11,24 @@ print("Print example:\nq1: " + str(q1) + "\n")
 q2 = q1
 print("Copy example:\nq2: " + str(q2) + "\n")
 
-# Use pauliX matrix
+# Use pauliX
 q3 = q1.pauliX()
 print("PauliX example:\nq3: " + str(q3) + "\n") 
 
-# Use pauliY matrix
+# Use pauliY
 q4 = q1.pauliY()
 print("PauliY example:\nq4: " + str(q4) + "\n")
 
-# Use pauliZ matrix
+# Use pauliZ
 q5 = q1.pauliZ()
 print("PauliZ example:\nq5: " + str(q5) + "\n")
 
-# Use hadamard exmaples
+# Use hadamard
 q6 = q1.hadamard()
 print("Hadamard example:\nq6: " + str(q6) + "\n")
 
+# Use sqrtNot
+q7 = q1.sqrtNot()
+print("SqrtNot example:\nq7: " + str(q7) + "\n")
 
 

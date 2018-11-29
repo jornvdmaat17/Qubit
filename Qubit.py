@@ -5,11 +5,12 @@ from math import sqrt
 hs2 = 1 / sqrt(2)
 offset = 0.000001
 
+identity = np.matrix([[1, 0],[0,1]])
 pauliX = np.matrix([[0,1],[1,0]])
 pauliY = np.matrix([[0,1j],[1j,0]])
 pauliZ = np.matrix([[1,0],[0,-1]])
 hadamard = hs2 * np.matrix([[1, 1], [1, -1]])
-
+sqrtNot = (1/2) * np.matrix([[1+1j, 1 - 1j], [1 - 1j, 1+1j]])
 
 class Qubit:
     def __init__(self, a, b):
@@ -34,6 +35,10 @@ class Qubit:
 
     def hadamard(self):
         tmp = hadamard * self.matrix
+        return Qubit(tmp.item(0), tmp.item(1))
+
+    def sqrtNot(self):
+        tmp = sqrtNot * self.matrix
         return Qubit(tmp.item(0), tmp.item(1))
 
     def __str__(self):
