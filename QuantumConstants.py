@@ -1,9 +1,11 @@
 from math import sqrt,e
 import numpy as np
 
+# Math constants
 GOLDEN = (1 + 5 ** 0.5) / 2
 HS2 = 1 / sqrt(2)
 
+# Matrices to be used with quantum calculations
 IDENTITY = np.matrix([[1, 0],[0,1]])
 PAULIX = np.matrix([[0,1],[1,0]])
 PAULIY = np.matrix([[0,1j],[1j,0]])

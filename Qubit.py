@@ -8,13 +8,14 @@ offset = 0.000001
 
 class Qubit:
     def __init__(self, a, b):
+        self.__read = False
         if 1 - offset < abs(a * a) + abs(b * b) < 1 + offset:
             self.__a = a
             self.__b = b
             self.__matrix = np.matrix([[self.__a],[self.__b]])
-			self.read = False
         else:
-           raise impossibleQubitException("Expected A^2 + B^2 = 1, but was " + str(abs(a * a) + abs(b * b)), None) 
+            print(a)
+            raise impossibleQubitException("Expected A^2 + B^2 = 1, but was " + str(abs(a * a) + abs(b * b)), None)
 
     def read(self):
         self.__read = True

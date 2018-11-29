@@ -39,5 +39,8 @@ print("Rphi example:\nq8: " + str(q8) + "\n")
 val = q7.read()
 print("after reading q7 gave:\n" + str(val) + "\n")
 
+# After reading you cant do calculations again
+q8 = q7.hadamard()
+print("q8: " + str(q8) + " is hetzelfde als q7: " + str(q7))
 
 
