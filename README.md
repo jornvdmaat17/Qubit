@@ -1,9 +1,9 @@
 # Qubit
+
 Qubit class for calculating things with qubits.
-
 Contains example file, qubit file containing Qubit class and an exception.
+Qubit class has seven functions:
 
-Qubit class has seven functions:<br>
 ### read()
 The bit will reveal its value and will return either 1 or 0, depending on alpha or beta.
 
