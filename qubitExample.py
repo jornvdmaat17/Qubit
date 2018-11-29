@@ -1,4 +1,4 @@
-from Qubit import Qubit
+from Qubit import *
 
 
 # Create a simple Qubit
