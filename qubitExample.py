@@ -35,4 +35,9 @@ print("SqrtNot example:\nq7: " + str(q7) + "\n")
 q8 = q1.rphi()
 print("Rphi example:\nq8: " + str(q8) + "\n")
 
+# After reading
+val = q7.read()
+print("after reading q7 gave:\n" + str(val) + "\n")
+
+
 

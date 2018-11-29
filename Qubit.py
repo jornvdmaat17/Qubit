@@ -1,6 +1,7 @@
 import numpy as np
 import cmath
 from math import sqrt,e
+from random import randint
 
 golden = (1 + 5 ** 0.5) / 2
 hs2 = 1 / sqrt(2)
@@ -12,7 +13,7 @@ pauliY = np.matrix([[0,1j],[1j,0]])
 pauliZ = np.matrix([[1,0],[0,-1]])
 hadamard = hs2 * np.matrix([[1, 1], [1, -1]])
 sqrtNot = (1/2) * np.matrix([[1+1j, 1 - 1j], [1 - 1j, 1+1j]])
-rphi = ([[1,0],[0,e ** (1j *golden)]])
+rphi = np.matrix([[1,0],[0,e ** (1j *golden)]])
 
 class Qubit:
     def __init__(self, a, b):
@@ -22,7 +23,18 @@ class Qubit:
             self.__matrix = np.matrix([[self.__a],[self.__b]])
         else:
            raise impossibleQubitException("Expected A^2 + B^2 = 1, but was " + str(abs(a * a) + abs(b * b)), None) 
-       
+
+    def read(self):
+        val = randint(0,100) / 100.0
+        if val < abs(self.__a)**2:
+            self.__a = 1
+            self.__b = 0
+            return 0
+        else:
+            self.__a = 0
+            self.__b = 1
+            return 1            
+
     def pauliX(self):
         tmp = pauliX * self.__matrix
         return Qubit(tmp.item(0), tmp.item(1))
