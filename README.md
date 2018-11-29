@@ -1,7 +1,7 @@
 # Qubit
 
-Qubit class for calculating things with qubits.
-Contains example file, qubit file containing Qubit class and an exception.
+Qubit class for calculating things with qubits.<br>
+Contains example file, qubit file containing Qubit class and an exception.<br>
 Qubit class has seven functions:
 
 ### read()
