@@ -31,4 +31,8 @@ print("Hadamard example:\nq6: " + str(q6) + "\n")
 q7 = q1.sqrtNot()
 print("SqrtNot example:\nq7: " + str(q7) + "\n")
 
+# Use rphi
+q8 = q1.rphi()
+print("Rphi example:\nq8: " + str(q8) + "\n")
+
 
