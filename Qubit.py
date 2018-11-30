@@ -32,44 +32,38 @@ class Qubit:
     def pauliX(self):
         if not self.__read:
             tmp = QuantumConstants.PAULIX * self.__matrix
-            return Qubit(tmp.item(0), tmp.item(1))
-        else:
-            return self
+            self.__a = tmp.item(0)
+            self.__b = tmp.item(1)
 
     def pauliY(self):
         if not self.__read:
             tmp = QuantumConstants.PAULIY * self.__matrix
-            return Qubit(tmp.item(0), tmp.item(1))
-        else:
-            return self
+            self.__a = tmp.item(0)
+            self.__b = tmp.item(1)
 
     def pauliZ(self):
         if not self.__read:
             tmp = QuantumConstants.PAULIZ * self.__matrix
-            return Qubit(tmp.item(0), tmp.item(1))
-        else:
-            return self
+            self.__a = tmp.item(0)
+            self.__b = tmp.item(1)
 
     def hadamard(self):
         if not self.__read:
             tmp = QuantumConstants.HADAMARD * self.__matrix
-            return Qubit(tmp.item(0), tmp.item(1))
-        else:
-            return self
+            self.__a = tmp.item(0)
+            self.__b = tmp.item(1)
 
     def sqrtNot(self):
         if not self.__read:
             tmp = QuantumConstants.SQRTNOT * self.__matrix
-            return Qubit(tmp.item(0), tmp.item(1))
-        else:
-            return self
+            self.__a = tmp.item(0)
+            self.__b = tmp.item(1)
 
     def rphi(self):
         if not self.__read:
             tmp = QuantumConstants.RPHI * self.__matrix
-            return Qubit(tmp.item(0), tmp.item(1))
-        else:
-            return self
+            self.__a = tmp.item(0)
+            self.__b = tmp.item(1)
 
     def __str__(self):
         return str(self.__a) + "|0> + " + str(self.__b) + "|1>"
