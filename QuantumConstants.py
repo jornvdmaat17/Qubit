@@ -2,8 +2,8 @@ from math import sqrt,e
 import numpy as np
 
 # Math constants
-GOLDEN = (1 + 5 ** 0.5) / 2
-HS2 = 1 / sqrt(2)
+GOLDEN = (1 + 5 ** 0.5) / 2 #This value is about: 1.618033988749895
+HS2 = 1 / sqrt(2)   #This value is about: 0.7071067811865475
 
 # Matrices to be used with quantum calculations
 IDENTITY = np.matrix([[1, 0],[0,1]])
