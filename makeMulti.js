@@ -9,9 +9,12 @@ $(document).ready(function(){
         }
         for(i = 0; i < multiCount; i++){
             var inf = document.createElement("form");
+            inf.appendChild(document.createTextNode("MultiQubit " + (i + 1) + ": "));
             inf.setAttribute('id',("multi" + i));
-
+            inf.appendChild(document.createElement("br"));
+            inf.appendChild(document.createElement("br"));
             
+            inf.appendChild(document.createTextNode("Pauli-X indeces: "));
             var paulix = document.createElement("input");
             inf.appendChild(paulix);
             inf.appendChild(document.createElement("br"));
