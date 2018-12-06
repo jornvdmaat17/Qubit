@@ -7,7 +7,7 @@
             "sqrtNot" : [1, 2],
             "rphi" :{
                 "index" : [1, 2],
-                "phi" : "pi / 8"
+                "phi" : 8
                     }
         }
     ]   

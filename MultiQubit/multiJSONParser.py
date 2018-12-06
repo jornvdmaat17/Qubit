@@ -1,6 +1,7 @@
 import json
 from pprint import pprint
 from multiQubit import *
+from math import pi
 
 with open('multi.json') as f:
     multi = json.load(f)
@@ -26,26 +27,25 @@ if "qubits"  in multi["multi"][i]:
     
 
     if "paulix" in multi["multi"][i]:   
-        for index, val in enumerate(multi["multi"][i]["paulix"]):
-            MQ.pauliX(val) 
+        MQ.pauliX(multi["multi"][i]["paulix"]) 
 
     if "pauliy" in multi["multi"][i]:   
-        for index, val in enumerate(multi["multi"][i]["pauliy"]):
-            MQ.pauliY(val) 
+        MQ.pauliY(multi["multi"][i]["pauliy"]) 
 
     if "pauliz" in multi["multi"][i]:   
-        for index, val in enumerate(multi["multi"][i]["pauliz"]):
-            MQ.pauliZ(val) 
+        MQ.pauliZ(multi["multi"][i]["pauliz"]) 
 
     if "hadamard" in multi["multi"][i]:   
-        for index, val in enumerate(multi["multi"][i]["hadamard"]):
-            MQ.hadamard(val) 
+        MQ.hadamard(multi["multi"][i]["hadamard"]) 
 
     if "sqrtnot" in multi["multi"][i]:   
-        for index, val in enumerate(multi["multi"][i]["sqrtnot"]):
-            MQ.sqrtNot(val) 
+        MQ.sqrtNot(multi["multi"][i]["sqrtnot"])
     
-    # if "rphi" in multi["multi"][i]:       
+    if "rphi" in multi["multi"][i]:    
+        phi = 1 
+        if "phi" in multi["multi"][i]["rphi"]:
+            phi = pi / multi["multi"][i]["rphi"]["phi"]
+        MQ.rphi(multi["multi"][i]["rphi"]["index"], phi)
 
 else:
     print("JSON not valid")
