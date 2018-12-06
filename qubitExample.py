@@ -24,6 +24,7 @@ Inside the file QuantumConstants you can find certain the matrices and some math
 
 from Qubit import *
 from QuantumConstants import HS2
+from math import pi
 
 
 # Create a simple Qubit
@@ -71,7 +72,7 @@ print("SqrtNot example:\nq6: " + str(q6) + "\n\n")
 
 # Use rphi
 q7 = Qubit(1,0)
-q7.rphi()
+q7.rphi(pi/8)
 print("Rphi example:\nq7: " + str(q7) + "\n\n")
 
 

@@ -59,9 +59,9 @@ class Qubit:
             self.__a = tmp.item(0)
             self.__b = tmp.item(1)
 
-    def rphi(self):
+    def rphi(self, phi):
         if not self.__read:
-            tmp = QuantumConstants.RPHI * self.__matrix
+            tmp =  np.matrix([[1,0],[0,e ** (1j * phi)]]) * self.__matrix
             self.__a = tmp.item(0)
             self.__b = tmp.item(1)
 
