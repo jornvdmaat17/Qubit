@@ -1,14 +1,30 @@
 {
     "multi": [
         {
-            "qubits" : [[0.6,0.8], [0,1], [1,0]],
-            "pauliX" : [0 , 2],
-            "pauliY" : [1],
-            "sqrtNot" : [1, 2],
-            "rphi" :{
-                "index" : [1, 2],
+            "qubits" : [[1,0],[0,1],[0,1],[1,0],[0,1]],
+            "paulix" : [],
+            "pauliy" : [],
+            "pauliz" : [],
+            "hadamard" : [],
+            "sqrtnot" : [],
+            "rphi": {
+                "index" : [],
                 "phi" : 8
-                    }
+            },
+            "print" : "false"
+        },
+        {
+            "qubits" : [[-0.6, 0.8],["-0.6j", 0.8],[0.6, 0.8],["HS2", "HS2"],[]],
+            "paulix" : [],
+            "pauliy" : [],
+            "pauliz" : [],
+            "hadamard" : [],
+            "sqrtnot" : [],
+            "rphi": {
+                "index" : [],
+                "phi" : 8
+            },
+            "print" : "true"
         }
     ]   
 }
