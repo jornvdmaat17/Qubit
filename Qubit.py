@@ -70,8 +70,7 @@ class Qubit:
 
 
 class impossibleQubitException(Exception):
-    def __init__(self, message, errors):
-        
+    def __init__(self, message, errors):        
         super().__init__(message)
         self.__errors = errors
 
