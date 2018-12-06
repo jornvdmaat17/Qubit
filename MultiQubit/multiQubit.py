@@ -11,42 +11,48 @@ class multiQubit:
     def pauliX(self, index):
         if isinstance(index, list):
             for i in index:
-                self.__qubits[i].pauliX()
+                if i < len(self.__qubits):
+                    self.__qubits[i].pauliX()
         else:
             self.__qubits[index].pauliX()
 
     def pauliY(self, index):
         if isinstance(index, list):
             for i in index:
-                self.__qubits[i].pauliY()
+                if i < len(self.__qubits):
+                    self.__qubits[i].pauliY()
         else:
             self.__qubits[index].pauliY()
 
     def pauliZ(self, index):
         if isinstance(index, list):
             for i in index:
-                self.__qubits[i].pauliZ()
+                if i < len(self.__qubits):
+                    self.__qubits[i].pauliZ()
         else:
             self.__qubits[index].pauliZ()
 
     def hadamard(self, index):
         if isinstance(index, list):
             for i in index:
-                self.__qubits[i].hadamard()
+                if i < len(self.__qubits):
+                    self.__qubits[i].hadamard()
         else:
             self.__qubits[index].hadamard()
 
     def sqrtNot(self, index):
         if isinstance(index, list):
             for i in index:
-                self.__qubits[i].sqrtNot()
+                if i < len(self.__qubits):
+                    self.__qubits[i].sqrtNot()
         else:
             self.__qubits[index].sqrtNot()
 
     def rphi(self, index, phi):
         if isinstance(index, list):
             for i in index:
-                self.__qubits[i].rphi(phi)
+                if i < len(self.__qubits):
+                    self.__qubits[i].rphi(phi)
         else:
             self.__qubits[index].rphi(phi)
 
