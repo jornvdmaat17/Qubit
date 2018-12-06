@@ -3,8 +3,9 @@ from math import pi
 
 import sys
 sys.path.append('lib/')
-from multiQubit import *
-from QuantumConstants import HS2
+from lib.multiQubit import *
+from lib.QuantumConstants import HS2
+from lib.Qubit import *
 
 with open('multi.json') as f:
     multi = json.load(f)

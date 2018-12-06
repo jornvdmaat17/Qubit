@@ -6,8 +6,7 @@ import QuantumConstants
 
 OFFSET = 0.000001
 
-class Qubit:
-
+class Qubit:    
     def __init__(self, a, b):
         self.__read = False
         if 1 - OFFSET < abs(a * a) + abs(b * b) < 1 + OFFSET:
