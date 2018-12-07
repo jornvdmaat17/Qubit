@@ -1,0 +1,23 @@
+.ininf{
+    margin-top:1%;
+    width:140px;
+    display: inline-block;
+}
+
+.inputdiv{
+    text-align: right;
+}
+fieldset{
+    width:22%;
+}
+
+.multiQubitTitle{
+    text-align: center;
+    font-size: 200%;
+}
+
+#jsonout{
+    float:right;
+    width:50%;
+    height: 80%;
+}

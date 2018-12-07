@@ -1,7 +1,9 @@
 import json
-from pprint import pprint
-from multiQubit import *
 from math import pi
+
+import sys
+sys.path.append('lib/')
+from multiQubit import *
 from QuantumConstants import HS2
 
 with open('multi.json') as f:
