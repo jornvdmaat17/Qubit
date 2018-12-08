@@ -1,28 +1,15 @@
 {
 	"multi": [
 		{
-			"qubits" : [[1,0]],
+			"qubits" : [[0,1], [1,0],[1,0]],
 			"paulix" : [0],
-			"pauliy" : [0],
-			"pauliz" : [0],
-			"hadamard" : [0],
-			"sqrnot" : [0],
+			"pauliy" : [1,2],
+			"pauliz" : [1],
+			"hadamard" : [],
+			"sqrnot" : [],
 			"rphi" : {
-				"index" : [0],
-				"phi" : 8
-			},
-			"print" : "false"
-		},
-		{
-			"qubits" : [[1,0],[0,1]],
-			"paulix" : [1],
-			"pauliy" : [0],
-			"pauliz" : [0],
-			"hadamard" : [1],
-			"sqrnot" : [1],
-			"rphi" : {
-				"index" : [0,1],
-				"phi" : 4
+				"index" : [],
+				"phi" : 1
 			},
 			"print" : "false"
 		}

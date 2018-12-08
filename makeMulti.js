@@ -134,24 +134,39 @@ function make(){
     var json = '{\n\t"multi": [\n';
     for(i = 0; i < multiCount; i++){
         var qubits = $('#qubits' + i).val();
+        if(qubits == []){
+            alert("Er zijn geen qubits ingevoerd bij MultiQubit " + (i + 1));
+            continue;
+        }
+        var qLen = qubits.length;
+        if(!Array.isArray($('#qubits' + i).val()) && qLen == 1){
+            alert("Qubit heeft een verkeerde syntax");
+            continue;
+        }else{
+            stop = false;
+            for(j=0;j<qLen;j++){
+                if(!Array.isArray(qubits[j])){
+                    stop = true;
+                }
+            }
+            if(stop = true){
+                alert("Qubit heeft een verkeerde syntax");
+                continue;
+            }
+        }
+        var rotat = 1;
+        var qubits = $('#qubits' + i).val();
         var paulix = $('#paulix' + i).val();
         var pauliy = $('#pauliy' + i).val();
         var pauliz = $('#pauliz' + i).val();
         var hadamard = $('#hadamard' + i).val();
         var sqrt = $('#sqrt' + i).val();
         var rphi = $('#rphi' + i).val();
-        var rotat = $('#rotat' + i).val();
-
-        // console.log(qubits);
-        // console.log(paulix);
-        // console.log(pauliy);
-        // console.log(pauliz);
-        // console.log(hadamard);
-        // console.log(sqrt);
-        // console.log(rphi);
-        // console.log(rotat);
-
-        
+        if($('#rotat' + i).val() != ""){
+            rotat = $('#rotat' + i).val();
+            console.log(true);
+        }
+       
         json += '\t\t{\n\t\t\t"qubits" : [' + qubits + '],\n';
         json += '\t\t\t"paulix" : [' + paulix + '],\n';
         json += '\t\t\t"pauliy" : [' + pauliy + '],\n';
