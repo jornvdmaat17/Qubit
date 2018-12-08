@@ -142,17 +142,12 @@ function make(){
         if(!Array.isArray($('#qubits' + i).val()) && qLen == 1){
             alert("Qubit heeft een verkeerde syntax");
             continue;
-        }else{
-            stop = false;
-            for(j=0;j<qLen;j++){
-                if(!Array.isArray(qubits[j])){
-                    stop = true;
-                }
-            }
-            if(stop = true){
-                alert("Qubit heeft een verkeerde syntax");
-                continue;
-            }
+        }
+        if(qubits.substring(qubits.length - 1, qubits.length) != "]"){
+            
+            alert("Qubit heeft een verkeerde syntax");
+            continue;
+            
         }
         var rotat = 1;
         var qubits = $('#qubits' + i).val();
