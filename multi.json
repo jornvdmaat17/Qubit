@@ -1,10 +1,10 @@
 {
 	"multi": [
 		{
-			"qubits" : [[0,1], [1,0],[1,0]],
-			"paulix" : [0],
-			"pauliy" : [1,2],
-			"pauliz" : [1],
+			"qubits" : [[0,1],[1,0]],
+			"paulix" : [],
+			"pauliy" : [1],
+			"pauliz" : [],
 			"hadamard" : [],
 			"sqrnot" : [],
 			"rphi" : {
