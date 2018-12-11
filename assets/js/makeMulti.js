@@ -177,8 +177,8 @@ function make(){
         var hadamard = $('#hadamard' + i).val();
         var sqrt = $('#sqrt' + i).val();
         var rphi = $('#rphi' + i).val();
-        if($('#print' + i).val() != ""){
-            print = $('#print' + i).val();
+        if($('#pin' + i).val() == "true"){
+            print = true;
         }
         if($('#rotat' + i).val() != ""){
             rotat = $('#rotat' + i).val();
