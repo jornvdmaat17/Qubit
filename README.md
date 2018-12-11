@@ -111,7 +111,7 @@ Below is an example for the print parameter usage:
 
 Below follows the output of this JSON file in the cmd:
 
-````cmd
+```cmd
     Your start matrix looks like this:
 
     [
