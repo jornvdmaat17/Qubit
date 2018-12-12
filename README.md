@@ -78,6 +78,12 @@ In this example the paulix logic gate will be applied to index 0 and 2 of the mu
 
 This gate works a bit different then the other gates. For this gate the indices also needs to be specified, but it also asks for an extra parameter. First PI will be divided by this number that is given. After that this variable, specified as PHI will be put into the matrix which is displayed below:
 
+\begin{pmatrix}
+1 & 0\\ 
+0 & e<sup>iφ</sup>
+\end{pmatrix}
+$$
+
 ```JSON
 {
     "multi": [
@@ -111,7 +117,7 @@ Below is an example for the print parameter usage:
 
 Below follows the output of this JSON file in the cmd:
 
-````cmd
+```cmd
     Your start matrix looks like this:
 
     [
