@@ -78,12 +78,11 @@ In this example the paulix logic gate will be applied to index 0 and 2 of the mu
 
 This gate works a bit different then the other gates. For this gate the indices also needs to be specified, but it also asks for an extra parameter. First PI will be divided by this number that is given. After that this variable, specified as PHI will be put into the matrix which is displayed below:
 
-$$
-\left(\begin{array}{cc} 
+\begin{pmatrix}
 1 & 0\\ 
 0 & e<sup>iφ</sup>
-\end{array}\right)
-$$ 
+\end{pmatrix}
+$$
 
 ```JSON
 {
