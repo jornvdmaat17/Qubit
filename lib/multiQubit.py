@@ -1,5 +1,3 @@
-import sys
-sys.path.append('../')
 from Qubit import *
 from QuantumConstants import *
 
