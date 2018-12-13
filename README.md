@@ -4,7 +4,7 @@ This repo can be used to simulate a MultiQubit system with a JSON file.
 The are a few different ways you can use this MultiQubit simulation, which are explained below.
 
 ## Installation
-The code in this repo requires for python and the numpy library to be installed on your computer. Python can be downloaded [here](https://www.python.org/downloads/release/python-370/) and numpy can then be installed with the cmd command `pip install numpy`
+The code in this repo requires for python and the numpy library to be installed on your computer. Python can be downloaded [here](https://www.python.org/downloads/release/python-370/) after installing numpy can be installed with the cmd command `pip install numpy`
 
 ## Generate your JSON
 Firstly, if JSON is still a bit difficult for you to understand, you can use the makeMulti.html file to generate your own JSON.
