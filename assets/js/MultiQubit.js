@@ -1,9 +1,10 @@
-let startc = 100;
+let startoffset = 100;
 let space = 20;
 let size = 60;
 
 function setup(){
     createCanvas(600, 600);
+    
 }
 
 function draw(){
@@ -11,26 +12,22 @@ function draw(){
     Menu for choosing
     */
 
-    line(startc, 0, startc, 600);
-
-    x = new vis(0,0,size,size, "X");
-    x.display();
+    line(startoffset, 0, startoffset, 600);
+    var testC = new canvImg(10, 10, 40, 40, 'assets/img/pauliy.png');
+    testC.display();
 }
 
-function vis(x0, y0, x1, y1, txt){
-    this.x0 = x0;
-    this.y0 = y0;
+function canvImg(x, dX, y, dY, imgPath){
+    this.x = x;
+    this.dX = dX;
+    this.y = y;
+    this.dY = dY;
+    this.imgPath = imgPath;
+    var img = loadImage(imgPath);
 
-    this.x1 = x1;
-    this.y1 = y1;
-
-    this.txt = txt;
-
-    this.display = function(){        
-        
-        stroke(1);
-        rect(x0 + startc + space, y0, x1, y1);
-        textSize(60);
-        text(txt, x0 + startc + size,  y0 + size/2);  
+    this.display = function(){
+        // image(img, x, y, dX, dY);
+        rect(this.x, this.dX, this.y, this.dY);
     };
-}
+
+};
