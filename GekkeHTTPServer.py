@@ -24,8 +24,10 @@ def main():
 
 @app.route("/get/pauliX/<Alpha>:<Beta>", methods=['GET'])
 def get_pauliX(Alpha,Beta):
-    if 1 - OFFSET < abs(complex(Alpha) * complex(Alpha)) + abs(complex(Beta) * complex(Beta)) < 1 + OFFSET:
-        tmp = PAULIX * np.matrix([[complex(Alpha)],[complex(Beta)]])
+    Alpha = complex(Alpha)
+    Beta = complex(Beta)
+    if 1 - OFFSET < abs(Alpha * Alpha) + abs(Beta * Beta) < 1 + OFFSET:
+        tmp = PAULIX * np.matrix([[Alpha],[Beta]])
         a = tmp.item(0)
         b = tmp.item(1)
 
@@ -34,8 +36,10 @@ def get_pauliX(Alpha,Beta):
 
 @app.route("/get/pauliY/<Alpha>:<Beta>", methods=['GET'])
 def get_pauliY(Alpha,Beta):
-    if 1 - OFFSET < abs(complex(Alpha) * complex(Alpha)) + abs(complex(Beta) * complex(Beta)) < 1 + OFFSET:
-        tmp = PAULIY * np.matrix([[complex(Alpha)],[complex(Beta)]])
+    Alpha = complex(Alpha)
+    Beta = complex(Beta)
+    if 1 - OFFSET < abs(Alpha * Alpha) + abs(Beta * Beta) < 1 + OFFSET:
+        tmp = PAULIY * np.matrix([[Alpha],[Beta]])
         a = tmp.item(0)
         b = tmp.item(1)
 
@@ -44,8 +48,10 @@ def get_pauliY(Alpha,Beta):
 
 @app.route("/get/pauliZ/<Alpha>:<Beta>", methods=['GET'])
 def get_pauliZ(Alpha,Beta):
-    if 1 - OFFSET < abs(complex(Alpha) * complex(Alpha)) + abs(complex(Beta) * complex(Beta)) < 1 + OFFSET:
-        tmp = PAULIZ * np.matrix([[complex(Alpha)],[complex(Beta)]])
+    Alpha = complex(Alpha)
+    Beta = complex(Beta)
+    if 1 - OFFSET < abs(Alpha * Alpha) + abs(Beta * Beta) < 1 + OFFSET:
+        tmp = PAULIZ * np.matrix([[Alpha],[Beta]])
         a = tmp.item(0)
         b = tmp.item(1)
 
@@ -54,8 +60,10 @@ def get_pauliZ(Alpha,Beta):
 
 @app.route("/get/hadamard/<Alpha>:<Beta>", methods=['GET'])
 def get_hadamard(Alpha,Beta):
-    if 1 - OFFSET < abs(complex(Alpha) * complex(Alpha)) + abs(complex(Beta) * complex(Beta)) < 1 + OFFSET:
-        tmp = HADAMARD * np.matrix([[complex(Alpha)],[complex(Beta)]])
+    Alpha = complex(Alpha)
+    Beta = complex(Beta)
+    if 1 - OFFSET < abs(Alpha * Alpha) + abs(Beta * Beta) < 1 + OFFSET:
+        tmp = HADAMARD * np.matrix([[Alpha],[Beta]])
         a = tmp.item(0)
         b = tmp.item(1)
 
@@ -64,8 +72,10 @@ def get_hadamard(Alpha,Beta):
 
 @app.route("/get/sqrtNOT/<Alpha>:<Beta>", methods=['GET'])
 def get_sqrtNOT(Alpha,Beta):
-    if 1 - OFFSET < abs(complex(Alpha) * complex(Alpha)) + abs(complex(Beta) * complex(Beta)) < 1 + OFFSET:
-        tmp = SQRTNOT * np.matrix([[complex(Alpha)],[complex(Beta)]])
+    Alpha = complex(Alpha)
+    Beta = complex(Beta)
+    if 1 - OFFSET < abs(Alpha * Alpha) + abs(Beta * Beta) < 1 + OFFSET:
+        tmp = SQRTNOT * np.matrix([[Alpha],[Beta]])
         a = tmp.item(0)
         b = tmp.item(1)
 
@@ -74,18 +84,19 @@ def get_sqrtNOT(Alpha,Beta):
 
 @app.route("/get/rphi/<Alpha>:<Beta>:<phi>", methods=['GET'])
 def get_rphi(Alpha,Beta,phi):
-    if 1 - OFFSET < abs(complex(Alpha) * complex(Alpha)) + abs(complex(Beta) * complex(Beta)) < 1 + OFFSET:
-        if phi == "0":
-            return "ZeroDivision: can't divide by zero for phi"
-        else:
-            tmp = np.matrix([[1,0],[0,e ** (1j * int(phi))]]) * np.matrix([[complex(Alpha)],[complex(Beta)]])
-            a = tmp.item(0)
-            b = tmp.item(1)
+    Alpha = complex(Alpha)
+    Beta = complex(Beta)
+    if 1 - OFFSET < abs(Alpha * Alpha) + abs(Beta * Beta) < 1 + OFFSET:
+        tmp = np.matrix([[1,0],[0,e ** (1j * phi)]]) * np.matrix([[Alpha],[Beta]])
+        a = tmp.item(0)
+        b = tmp.item(1)
 
-            return str(a) + ":" + str(b)
+        return str(a) + ":" + str(b)
     else: return "impossibleQubitException: Expected A^2 + B^2 = 1, but was " + str(abs(a * a) + abs(b * b))
 
 if __name__ == "__main__":
     app.run(debug=True, host="127.0.0.1", port=7234)
+
+#test
 
 
