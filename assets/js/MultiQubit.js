@@ -1,6 +1,9 @@
 let startoffset = 100;
 let space = 20;
 let size = 60;
+let lspace = 10;
+
+var pXI;
 
 function setup(){
     createCanvas(600, 600);
@@ -13,21 +16,18 @@ function draw(){
     */
 
     line(startoffset, 0, startoffset, 600);
-    var testC = new canvImg(10, 10, 40, 40, 'assets/img/pauliy.png');
+    var testC = new pauliX(50,50);
     testC.display();
 }
 
-function canvImg(x, dX, y, dY, imgPath){
+function pauliX(x, y){
     this.x = x;
-    this.dX = dX;
     this.y = y;
-    this.dY = dY;
-    this.imgPath = imgPath;
-    var img = loadImage(imgPath);
 
     this.display = function(){
-        // image(img, x, y, dX, dY);
-        rect(this.x, this.dX, this.y, this.dY);
+        rect(this.x, this.y, size, size);
+        line(this.x + lspace, this.y + lspace, this.x + size - lspace, this.y + size - lspace );
+        line(this.x + lspace, this.y + size + lspace, this.x + size + lspace, this.y - size + lspace);
     };
 
 };
